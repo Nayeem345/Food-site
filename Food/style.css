@@ -1,0 +1,183 @@
+@import url(//db.onlinewebfonts.com/c/2aa1694b8b55e93ebe3c8b8317b4eae9?family=Aachen+BT);
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+    font-family: "Aachen BT";
+    text-transform: capitalize;
+}
+
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+
+}
+:root{
+    
+    --yellow : #e58f00;
+}
+section{
+    padding: 20rem 9%;
+}
+
+/* Header Section */
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 5rem 9%;
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5));
+    height: 100px;
+}
+
+
+header a  img{
+    position: absolute;
+    z-index: 1000;
+    top: 10px; left: 50%; right: 0;
+}
+
+header  .navbar a{
+    font-size: 2rem;
+    color: white;
+    margin-left: 2.5rem;
+    
+    
+}
+header  .navbar a:nth-child(4),header  .navbar a:nth-child(5),header  .navbar a:nth-child(6){
+   
+   float: right;
+  
+}
+header  .navbar a:hover{
+    color:var(--yellow);
+}
+
+#menu-bar{
+    font-size: 3rem;
+    color:white;
+    cursor: pointer;
+    display: none;
+}
+
+/* About Section */
+.contact{
+    background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)), url(img/bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: ;
+    
+    
+  }
+  
+  .contact .row .image{
+    flex:1 1 40rem;
+    
+  }
+  
+  .contact .row .image img{
+    width:100%;
+  }
+  
+  .contact .row .content{
+    flex:1 1 40rem;
+  }
+  
+  .contact .row .content h3{
+    color:var(--yellow);
+    font-size: 5.5rem;
+    padding: 1rem 4rem;
+  }
+  
+  .contact .row .content p{
+    color:#fff;
+    font-size: 1.7rem;
+    padding: 1rem 4rem;
+  }
+  
+  .contact .row .content .button{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 4rem;
+  }
+  
+  .contact .row .content .button a{
+      background: var(--yellow);
+      font-weight: bold;
+      font-size: 1.7rem;
+      border-radius: .5rem;
+      color: black;
+      padding: 1.7rem 2rem;
+    
+  }
+  
+  
+
+
+/* Responsive */
+@media (max-width: 991px){
+    #menu-bar{
+        display: none;
+    }
+}
+@media (max-width: 768px){
+    #menu-bar{
+        display: block;
+        position: absolute;
+        top: 3rem; right: 0; left: 85%;
+        
+    }
+    header{
+        background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5));
+    }
+    header a  img{
+        position: absolute;
+        z-index: -1;
+        top: 10px; left: 3rem; right: 0;
+    }
+    
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5));
+        border-top: .1rem solid #fff3;
+        padding: 1rem 2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        
+    }
+    header .navbar.nav-toggle{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    header .navbar a{
+        margin: 1.5rem 0;
+        padding: 1rem;
+        text-align: center;
+        display:block;
+        border-radius: .5rem;
+    }
+    header .navbar a:hover{
+        color: var(--yellow);
+    }
+    
+    header  .navbar a:nth-child(4),header  .navbar a:nth-child(5),header  .navbar a:nth-child(6){
+   
+        float: none;
+       
+     }
+}
